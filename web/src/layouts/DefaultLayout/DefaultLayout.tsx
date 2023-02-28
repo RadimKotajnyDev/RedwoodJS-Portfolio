@@ -8,7 +8,7 @@ type DefaultLayoutProps = {
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return <Box
     h="100vh"
-    background="blackAlpha.900"
+    background="blackAlpha.900" //TODO: fix dark mode
     color="white"
   >
     <Navbar />

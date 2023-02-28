@@ -20,3 +20,21 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
+.h1-text {
+  background-image: linear-gradient(to left, #7928CA, #FF0080);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: var(--chakra-fontSizes-6xl);
+  font-weight: 900;
+}
+
+.h2-text {
+  color: #509494;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: var(--chakra-fontSizes-4xl);
+  font-weight: 500;
+}

@@ -21669,6 +21669,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-type-animation@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "react-type-animation@npm:2.1.2"
+  peerDependencies:
+    prop-types: ^15.5.4
+    react: ">= 15.0.0"
+    react-dom: ">= 15.0.0"
+  checksum: 83f8d99c9b34aa47d2156c300697ed921ac16c418f52579b0f5e98087706234080d97851c3afdf4da6bc53856db1b19cff8929ba8651f45a56a089fbc8ace2e0
+  languageName: node
+  linkType: hard
+
 "react@npm:17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -22352,6 +22363,7 @@ __metadata:
     "@fontsource/noto-sans": ^4.5.11
     "@redwoodjs/core": 4.2.0
     react-icons: ^4.7.1
+    react-type-animation: ^2.1.2
   languageName: unknown
   linkType: soft
 
