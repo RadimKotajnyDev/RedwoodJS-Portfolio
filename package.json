@@ -20,5 +20,9 @@
   "prisma": {
     "seed": "yarn rw exec seed"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "@fontsource/noto-sans": "^4.5.11",
+    "react-icons": "^4.7.1"
+  }
 }
