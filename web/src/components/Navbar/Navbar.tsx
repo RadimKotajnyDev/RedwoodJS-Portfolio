@@ -1,15 +1,24 @@
-import { Link, NavLink, routes } from "@redwoodjs/router";
-import { Button, chakra, Flex, ListItem, Spacer, UnorderedList } from "@chakra-ui/react";
+import {Button, chakra, Flex, ListItem, Spacer, UnorderedList} from "@chakra-ui/react";
+
+import {Link, NavLink, routes} from "@redwoodjs/router";
+
 
 const Navbar = () => {
   return (
     <Flex as="nav" align="center">
-      <Spacer />
+      <Spacer/>
       <UnorderedList
+        bg="rgba(10,10,10,10)"
         display="flex"
+        borderRadius="xl"
         styleType="none"
-        m={20} gap="35px"
+        mt={10} mr={20}
+        p={5} px={10}
+        mb={20} gap="35px"
       >
+        <ListItem className="hover-underline-animation">
+          <Link to={routes.home()}>Home</Link>
+        </ListItem>
         <ListItem className="hover-underline-animation">
           <Link to={routes.about()}>About</Link>
         </ListItem>
