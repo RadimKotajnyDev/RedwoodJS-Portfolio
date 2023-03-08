@@ -4,20 +4,13 @@ import { Button, chakra, Flex, ListItem, Spacer, UnorderedList } from "@chakra-u
 const Navbar = () => {
   return (
     <Flex as="nav" align="center">
-      <Button
-        m={20}
-        colorScheme="teal"
-      >
-        <Link to={routes.home()}>HOME</Link>
-      </Button>
       <Spacer />
       <UnorderedList
         display="flex"
         styleType="none"
         m={20} gap="35px"
       >
-        <ListItem className="hover-underline-animation"
-        >
+        <ListItem className="hover-underline-animation">
           <Link to={routes.about()}>About</Link>
         </ListItem>
         <ListItem className="hover-underline-animation"
