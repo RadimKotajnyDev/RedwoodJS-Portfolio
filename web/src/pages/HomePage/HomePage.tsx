@@ -16,11 +16,6 @@ const ChakraBox = chakra(motion.div, {
 
 
 const HomePage = () => {
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   return (
     <>
       <MetaTags
@@ -47,14 +42,17 @@ const HomePage = () => {
             />
           </Flex>
           <Spacer />
-          <ChakraBox
+          {/*
+            <ChakraBox
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 4, duration: 0.5 }}
             boxSize="2xl" pos="absolute" ml="60vw">
             <Image src="/RadimLogo.png" alt="Radim Kotajny Logo" />
           </ChakraBox>
+          */}
         </Flex>
+        {/*
         <ChakraBox
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -62,6 +60,7 @@ const HomePage = () => {
           boxSize="3xl">
           <Image src="/welcome.png" alt="welcome code" />
         </ChakraBox>
+       */}
       </Box>
     </>
   )

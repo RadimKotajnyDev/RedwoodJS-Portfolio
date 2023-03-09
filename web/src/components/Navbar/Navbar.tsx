@@ -1,14 +1,15 @@
-import {Button, chakra, Flex, ListItem, Spacer, UnorderedList} from "@chakra-ui/react";
-
+import { Button, chakra, Flex, ListItem, Spacer, UnorderedList, Switch, useColorMode } from "@chakra-ui/react";
 import {Link, NavLink, routes} from "@redwoodjs/router";
 
-
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <Flex as="nav" align="center">
+    // @ts-ignore
+    <Flex as="motion.nav" align="center">
       <Spacer/>
       <UnorderedList
-        bg="rgba(10,10,10,10)"
+        bg="black"
+        color="white"
         display="flex"
         borderRadius="xl"
         styleType="none"
@@ -16,6 +17,12 @@ const Navbar = () => {
         p={5} px={10}
         mb={20} gap="35px"
       >
+        <ListItem>
+          <Switch
+            onChange={() => toggleColorMode()}
+            colorScheme="teal"
+          />
+        </ListItem>
         <ListItem className="hover-underline-animation">
           <Link to={routes.home()}>Home</Link>
         </ListItem>

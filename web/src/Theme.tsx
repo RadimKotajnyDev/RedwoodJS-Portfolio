@@ -1,12 +1,16 @@
-import '@fontsource/noto-sans'
-import { extendTheme } from '@chakra-ui/react'
+import "@fontsource/noto-sans";
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
-const config = {
-  initialColorMode: 'dark',
-  useSystemColorMode: false,
-}
+import { mode } from '@chakra-ui/theme-tools'
+// @ts-ignore
+import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
-const colors = {
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: true
+};
+
+const colors: any = {
   "black": "#0c1015",
   "gray": {
     "50": "#f9fafa",
@@ -140,13 +144,21 @@ const colors = {
     "800": "#214e4e",
     "900": "#183838"
   }
-}
+};
 
-const theme = extendTheme({
-  colors, config, fonts: {
-    body: `'Open Sans', sans-serif`,
+const theme = extendTheme({ config }, { colors }, {
+  fonts: {
+    body: `'Open Sans', sans-serif`
   },
-})
+  styles: {
+    global: (props: StyleFunctionProps) => ({
+      body: {
+        color: mode('gray.800', 'whiteAlpha.900')(props),
+        bg: mode('white', 'gray.800')(props),
+        lineHeight: 'base',
+      },
+    }),
+  },
+});
 
-export default theme
-
+export default theme;
