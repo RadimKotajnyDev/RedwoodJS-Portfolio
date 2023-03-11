@@ -29,16 +29,17 @@ const Navbar = () => {
         styleType="none"
         mt={10} mr={20}
         p={5} px={10}
-        mb={20} gap="35px"
+        mb={20} gap="25px"
       >
         <ListItem>
           <Button
             onClick={() => toggleColorMode()}
-            colorScheme="teal" variant="solid" m={-5} mr={1}
+            colorScheme="teal" variant="solid" m={-5} mr={.01}
           >
             <MdModeNight />
           </Button>
         </ListItem>
+        <ListItem className="border" />
         {routeNames.map( (RouteInArr) =>
           <ListItem className="hover-underline-animation">
             <Link to={RouteInArr.RouteTo}>{RouteInArr.name}</Link>
