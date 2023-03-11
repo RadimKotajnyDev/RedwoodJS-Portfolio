@@ -27,7 +27,7 @@ const Navbar = () => {
         display="flex"
         borderRadius="xl"
         styleType="none"
-        mt={10} mr={20}
+        mt={10} mr={10}
         p={5} px={10}
         mb={20} gap="25px"
       >
