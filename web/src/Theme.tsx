@@ -11,6 +11,7 @@ const config: ThemeConfig = {
 };
 
 const colors: any = {
+  "bgDark": "#315659",
   "black": "#0c1015",
   "gray": {
     "50": "#f9fafa",
@@ -155,7 +156,6 @@ const theme = extendTheme({ config }, { colors }, {
       body: {
         color: mode('gray.800', 'whiteAlpha.900')(props),
         bg: mode('white', 'gray.800')(props),
-        lineHeight: 'base',
       },
     }),
   },

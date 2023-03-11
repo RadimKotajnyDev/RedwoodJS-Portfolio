@@ -1,11 +1,25 @@
-import { Button, chakra, Flex, ListItem, Spacer, UnorderedList, Switch, useColorMode } from "@chakra-ui/react";
+import { Button, chakra, Flex, ListItem, Spacer, UnorderedList, useColorMode } from "@chakra-ui/react";
 import {Link, NavLink, routes} from "@redwoodjs/router";
+import {MdModeNight} from "react-icons/md"
+import {motion} from "framer-motion";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
+
+  const routeNames = [
+    {RouteTo: routes.home(), name: "Home"},
+    {RouteTo: routes.about(), name: "About"},
+    {RouteTo: routes.hobby(), name: "Hobby"},
+    {RouteTo: routes.work(), name: "Work"},
+    {RouteTo: routes.contact(), name: "Contact"}
+  ]
+
   return (
     // @ts-ignore
-    <Flex as="motion.nav" align="center">
+    <Flex as="motion.nav" align="center"
+      initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 5 }}
+    >
       <Spacer/>
       <UnorderedList
         bg="black"
@@ -18,29 +32,18 @@ const Navbar = () => {
         mb={20} gap="35px"
       >
         <ListItem>
-          <Switch
-            onChange={() => toggleColorMode()}
-            colorScheme="teal"
-          />
+          <Button
+            onClick={() => toggleColorMode()}
+            colorScheme="teal" variant="solid" m={-5} mr={1}
+          >
+            <MdModeNight />
+          </Button>
         </ListItem>
-        <ListItem className="hover-underline-animation">
-          <Link to={routes.home()}>Home</Link>
-        </ListItem>
-        <ListItem className="hover-underline-animation">
-          <Link to={routes.about()}>About</Link>
-        </ListItem>
-        <ListItem className="hover-underline-animation"
-        >
-          <Link to={routes.hobby()}>
-            Hobby
-          </Link>
-        </ListItem>
-        <ListItem className="hover-underline-animation">
-          <Link to={routes.work()}>Work</Link>
-        </ListItem>
-        <ListItem className="hover-underline-animation">
-          <Link to={routes.contact()}>Contact</Link>
-        </ListItem>
+        {routeNames.map( (RouteInArr) =>
+          <ListItem className="hover-underline-animation">
+            <Link to={RouteInArr.RouteTo}>{RouteInArr.name}</Link>
+          </ListItem>
+        )}
       </UnorderedList>
     </Flex>
   );
