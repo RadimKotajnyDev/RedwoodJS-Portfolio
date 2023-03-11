@@ -33,6 +33,7 @@ const Navbar = () => {
       >
         <ListItem>
           <Button
+            _focus=""
             onClick={() => toggleColorMode()}
             colorScheme="teal" variant="solid" m={-5} mr={.01}
           >
