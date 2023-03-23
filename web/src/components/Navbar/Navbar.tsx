@@ -28,11 +28,16 @@ const Navbar = () => {
   const [isOpened, setOpen] = useState(false);
 
   const routeNames = [
-    { RouteTo: routes.home(), name: "Home", MenuIcon: <AiOutlineHome />, id: 0 },
-    { RouteTo: routes.about(), name: "About", MenuIcon: <AiOutlineInfoCircle />, id: 1 },
-    { RouteTo: routes.hobby(), name: "Hobby", MenuIcon: <AiOutlineCode />, id: 2 },
-    { RouteTo: routes.work(), name: "Work", MenuIcon: <MdWorkOutline />, id: 3 },
-    { RouteTo: routes.contact(), name: "Contact", MenuIcon: <AiOutlineContacts />, id: 4 }
+    { RouteTo: routes.home(),
+      name: "Home", MenuIcon: <AiOutlineHome />, id: 0 },
+    { RouteTo: routes.about(),
+      name: "About", MenuIcon: <AiOutlineInfoCircle />, id: 1 },
+    { RouteTo: routes.hobby(),
+      name: "Hobby", MenuIcon: <AiOutlineCode />, id: 2 },
+    { RouteTo: routes.work(),
+      name: "Work", MenuIcon: <MdWorkOutline />, id: 3 },
+    { RouteTo: routes.contact(),
+      name: "Contact", MenuIcon: <AiOutlineContacts />, id: 4 }
   ];
 
 
@@ -89,7 +94,8 @@ const Navbar = () => {
             as={IconButton}
             aria-label="Options"
             icon={isOpened ? <AiOutlineClose /> : <AiOutlineMenu />}
-            variant="outline"
+            variant="solid"
+            colorScheme="primary"
           />
           <MenuList>
             {
@@ -100,7 +106,9 @@ const Navbar = () => {
                   </MenuItem>
                 </Link>
               )}
+            <hr />
             <MenuItem
+              fontWeight="semibold"
               icon={<MdModeNight />}
               onClick={() => toggleColorMode()}>
               {
