@@ -71,6 +71,10 @@ const Navbar = () => {
           <ListItem className="border" />
           <ListItem>
             <Button
+              // sorry blind people
+              _focus={{
+                outline: "none"
+              }}
               onClick={() => toggleColorMode()}
               colorScheme="teal" variant="solid" m={-5} ml={.01}
             >
@@ -92,6 +96,10 @@ const Navbar = () => {
           colorScheme="teal">
           <MenuButton
             as={IconButton}
+            // sorry blind people
+            _focus={{
+              outline: "none"
+            }}
             aria-label="Options"
             icon={isOpened ? <AiOutlineClose /> : <AiOutlineMenu />}
             variant="solid"
@@ -108,7 +116,6 @@ const Navbar = () => {
               )}
             <hr />
             <MenuItem
-              fontWeight="semibold"
               icon={<MdModeNight />}
               onClick={() => toggleColorMode()}>
               {
