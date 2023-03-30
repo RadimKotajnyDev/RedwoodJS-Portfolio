@@ -49,7 +49,7 @@ const Navbar = () => {
               md: "flex"
             }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-        // @ts-ignore
+            // @ts-ignore
             transition={{ duration: 2, delay: 5 }}
       >
         <Spacer />
