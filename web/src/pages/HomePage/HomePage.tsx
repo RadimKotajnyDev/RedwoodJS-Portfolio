@@ -67,7 +67,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             //@ts-ignore
-            transition={{ duration: 1, delay: .5 }}
+            transition={{ duration: 1, delay: 2.5 }}
         >
           <Box
             zIndex="-1"
