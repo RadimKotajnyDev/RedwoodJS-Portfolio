@@ -1,16 +1,16 @@
-import { Box, Image, Flex, Spacer, chakra, shouldForwardProp } from '@chakra-ui/react'
-import { TypeAnimation } from 'react-type-animation'
+import { Box, Image, Flex, Spacer, chakra, shouldForwardProp, Text } from "@chakra-ui/react";
+import { TypeAnimation } from "react-type-animation";
 
-import { MetaTags } from '@redwoodjs/web'
-import 'src/index.css'
+import { MetaTags } from "@redwoodjs/web";
+import "src/index.css";
 
-import { motion, isValidMotionProp } from 'framer-motion';
+import { motion, isValidMotionProp } from "framer-motion";
 
 const ChakraBox = chakra(motion.div, {
   /**
    * Allow motion props and non-Chakra props to be forwarded.
    */
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop)
 });
 
 
@@ -22,7 +22,12 @@ const HomePage = () => {
         description="Radim Kotajny Portfolio Website"
       />
       <Box>
-        <Flex>
+        <Flex
+          zIndex="1"
+          as="div" position="relative" mb={{
+          base: "0",
+          md: "-300px"
+        }}>
           <Flex as="div" direction="column" ml={{
             base: 10,
             md: 100
@@ -33,21 +38,43 @@ const HomePage = () => {
               wrapper="h1"
               className="h1-text"
               speed={25}
-              sequence={['Radim Kotajny', 1500]}
+              sequence={["Radim Kotajny", 1500]}
             />
-            <TypeAnimation
-              speed={50}
-              sequence={[1500, 'Frontend Developer.']}
-              wrapper="h2"
-              cursor={false}
-              className="h2-text"
-            />
+            <Box h={10}>
+              <TypeAnimation
+                speed={50}
+                sequence={[1500, "Frontend Developer."]}
+                wrapper="h2"
+                cursor={false}
+                className="h2-text"
+              />
+            </Box>
           </Flex>
           <Spacer />
         </Flex>
+        <Box
+          zIndex="-1"
+          boxSize="full"
+          pos="relative"
+        >
+          <Image src="/waves2.svg" alt="waves" w="full" h="full"
+                 z-index="0" objectFit="cover"
+          />
+        </Box>
+        <Text bg="teal.800" color="white" align="center" p={20} fontSize="5xl" fontWeight="thin">Inspiration and ideas
+          comes in waves.</Text>
+        <Box
+          zIndex="-1"
+          boxSize="full"
+          pos="static"
+        >
+          <Image src="/waves4.svg" alt="waves" w="full" h="full"
+                 z-index="0" objectFit="cover"
+          />
+        </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
