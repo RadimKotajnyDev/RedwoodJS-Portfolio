@@ -15,6 +15,7 @@ const ChakraBox = chakra(motion.div, {
 
 
 const HomePage = () => {
+  // @ts-ignore
   return (
     <>
       <MetaTags
@@ -62,26 +63,36 @@ const HomePage = () => {
           </Flex>
           <Spacer />
         </Flex>
-        <Box
-          zIndex="-1"
-          boxSize="full"
-          pos="relative"
+        <ChakraBox
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            //@ts-ignore
+            transition={{ duration: 1, delay: .5 }}
         >
-          <Image src="/waves2.svg" alt="waves" w="full" h="full"
-                 z-index="0" objectFit="cover"
-          />
-        </Box>
-        <Text bg="teal.800" color="white" align="center" p={20} fontSize="5xl" fontWeight="thin">Inspiration and ideas
-          comes in waves.</Text>
-        <Box
-          zIndex="-1"
-          boxSize="full"
-          pos="static"
-        >
-          <Image src="/waves4.svg" alt="waves" w="full" h="full"
-                 z-index="0" objectFit="cover"
-          />
-        </Box>
+          <Box
+            zIndex="-1"
+            boxSize="full"
+            pos="relative"
+          >
+            <Image src="/waves2.svg" alt="waves" w="full" h="full"
+                   z-index="0" objectFit="cover"
+            />
+          </Box>
+          <Text bg="teal.800" color="white" align="center" p={20} fontSize={{
+            base: "3xl",
+            md: "5xl"
+          }} fontWeight="thin">Inspiration and ideas
+            comes in waves.</Text>
+          <Box
+            zIndex="-1"
+            boxSize="full"
+            pos="static"
+          >
+            <Image src="/waves4.svg" alt="waves" w="full" h="full"
+                   z-index="0" objectFit="cover"
+            />
+          </Box>
+        </ChakraBox>
       </Box>
     </>
   );

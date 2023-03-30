@@ -75,7 +75,7 @@ const Navbar = () => {
               _focus={{
                 outline: "none"
               }}
-              onClick={() => toggleColorMode()}
+              onClick={() => {toggleColorMode(); console.log("Light attracts bugs... 👀")}}
               colorScheme="teal" variant="solid" m={-5} ml={.01} pb={1}
             >
               <MdModeNight />
@@ -108,8 +108,8 @@ const Navbar = () => {
           <MenuList>
             {
               routeNames.map((RouteInArr) =>
-                <Link to={RouteInArr.RouteTo}>
-                  <MenuItem key={RouteInArr.id} icon={RouteInArr.MenuIcon}>
+                <Link key={RouteInArr.id} to={RouteInArr.RouteTo}>
+                  <MenuItem icon={RouteInArr.MenuIcon}>
                     {RouteInArr.name}
                   </MenuItem>
                 </Link>
@@ -117,7 +117,7 @@ const Navbar = () => {
             <hr />
             <MenuItem
               icon={<MdModeNight />}
-              onClick={() => toggleColorMode()}>
+              onClick={() => {toggleColorMode(); console.log("Light attracts bugs... 👀")}}>
               {
                 colorMode === "dark" ? "Light" : "Dark"
               }
