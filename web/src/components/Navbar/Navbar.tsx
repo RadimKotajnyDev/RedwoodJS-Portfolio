@@ -76,7 +76,7 @@ const Navbar = () => {
                 outline: "none"
               }}
               onClick={() => {toggleColorMode(); console.log("Light attracts bugs... 👀")}}
-              colorScheme="teal" variant="solid" m={-5} ml={.01} pb={1}
+              colorScheme="teal" variant="solid" m={-5} ml={.01}
             >
               <MdModeNight />
             </Button>
