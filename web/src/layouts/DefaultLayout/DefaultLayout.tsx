@@ -1,5 +1,5 @@
 import Navbar from "src/components/Navbar"
-import {Box, Image} from "@chakra-ui/react";
+import {Box, Image, Text} from "@chakra-ui/react";
 
 type DefaultLayoutProps = {
   children?: React.ReactNode
@@ -24,10 +24,21 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     </Box>
     <Box
       zIndex="-1"
+      mt={50}
       boxSize="full"
-      pos="absolute"
+      pos="relative"
     >
-      <Image src="/waves.svg" alt="waves" w="full" h="full"
+      <Image src="/waves2.svg" alt="waves" w="full" h="full"
+             z-index="0" objectFit="cover"
+      />
+    </Box>
+    <Text bg="teal.800" color="white"  align="center" p={20} fontSize="5xl" fontWeight="thin">Inspiration and ideas comes in waves.</Text>
+    <Box
+      zIndex="-1"
+      boxSize="full"
+      pos="static"
+    >
+      <Image src="/waves4.svg" alt="waves" w="full" h="full"
              z-index="0" objectFit="cover"
       />
     </Box>

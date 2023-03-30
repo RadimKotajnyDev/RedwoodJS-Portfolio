@@ -7,8 +7,7 @@
 }
 
 .hover-underline-animation::after {
-  content: '';
-  position: absolute;
+  content: '';  position: absolute;
   width: 100%;
   transform: scaleX(0);
   height: 2px;
