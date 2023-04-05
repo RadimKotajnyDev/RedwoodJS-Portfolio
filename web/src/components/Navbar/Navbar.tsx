@@ -100,8 +100,10 @@ const Navbar = () => {
             _focus={{
               outline: "none"
             }}
+            size={15}
+            p={3}
             aria-label="Options"
-            icon={isOpened ? <AiOutlineClose /> : <AiOutlineMenu />}
+            icon={isOpened ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
             variant="solid"
             colorScheme="primary"
           />

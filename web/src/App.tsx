@@ -1,5 +1,5 @@
 import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
-import Theme from "./Theme"
+import Theme from "./ChakraTheme"
 
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
