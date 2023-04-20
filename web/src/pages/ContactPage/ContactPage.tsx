@@ -6,7 +6,10 @@ const ContactPage = () => {
   return (
     <>
       <MetaTags title="Contact" description="Contact page" />
-      <Text as="h1" className="h1-text" align="center" fontSize="7xl">Contact</Text>
+      <Text as="h1" className="h1-text" align="center" fontSize={{
+        base: "4xl",
+        md: "7xl"
+      }}>Contact</Text>
 
     </>
   )

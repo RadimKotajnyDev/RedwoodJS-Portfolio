@@ -6,7 +6,10 @@ const HobbyPage = () => {
   return (
     <>
       <MetaTags title="Hobby" description="Hobby page" />
-      <Text as="h1" className="h1-text" align="center" fontSize="7xl">Hobby</Text>
+      <Text as="h1" className="h1-text" align="center" fontSize={{
+        base: "4xl",
+        md: "7xl"
+      }}>Hobby</Text>
 
     </>
   )

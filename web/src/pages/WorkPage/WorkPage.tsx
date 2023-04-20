@@ -6,7 +6,10 @@ const WorkPage = () => {
   return (
     <>
       <MetaTags title="Work" description="Work page" />
-      <Text as="h1" className="h1-text" align="center" fontSize="7xl">Work</Text>
+      <Text as="h1" className="h1-text" align="center" fontSize={{
+        base: "4xl",
+        md: "7xl"
+      }}>Work</Text>
 
     </>
   )

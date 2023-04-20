@@ -40,3 +40,11 @@
   font-size: var(--chakra-fontSizes-4xl);
   font-weight: 500;
 }
+
+.navActive {
+  text-decoration: underline;
+}
+
+.navNotActive {
+  text-decoration: none;
+}

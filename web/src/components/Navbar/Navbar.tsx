@@ -50,7 +50,6 @@ const Navbar = () => {
       name: "Contact", MenuIcon: <AiOutlineContacts />, id: 4 }
   ];
 
-
   return (
     <>
       <Flex as="nav" align="center"
@@ -71,7 +70,7 @@ const Navbar = () => {
           styleType="none"
           mt={10} mr={10}
           p={5} px={10}
-          mb={20} gap="25px"
+          mb={7} gap="25px"
         >
           {routeNames.map((RouteInArr) =>
             <ListItem key={RouteInArr.id} className="hover-underline-animation">
