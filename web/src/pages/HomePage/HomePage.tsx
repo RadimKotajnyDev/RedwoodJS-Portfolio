@@ -1,6 +1,6 @@
-import { Box, Image, Flex, Spacer, chakra, shouldForwardProp, Text } from "@chakra-ui/react";
+import { Box, Image, Center, Button, Flex, Spacer, chakra, shouldForwardProp, Text } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
-
+import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from "@redwoodjs/web";
 import "src/index.css";
 
@@ -101,13 +101,25 @@ const HomePage = () => {
           <Box
             zIndex="-1"
             boxSize="full"
-            pos="static"
+            pos="relative"
           >
             <Image src="/waves4.svg" alt="waves" w="full" h="full"
                    z-index="0" objectFit="cover"
             />
           </Box>
+          <Flex justify="center" mb={1}>
+            <Text fontSize="4xl">Checkout my projects 🤠</Text>
+
+          </Flex>
+          <Center mb={10}>
+            <Button colorScheme='teal' size='md'>
+              <Link to={routes.work()}>Work</Link>
+            </Button>
+          </Center>
         </ChakraBox>
+        <Center>
+          <Text>Copyright Radim Kotajny &copy; {new Date().getFullYear()}</Text>
+        </Center>
       </Box>
     </>
   );

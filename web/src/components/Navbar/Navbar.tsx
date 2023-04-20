@@ -1,7 +1,17 @@
-import { Button, chakra, Flex, IconButton, ListItem, Spacer, UnorderedList, useColorMode } from "@chakra-ui/react";
+import {
+  Button,
+  chakra,
+  Flex,
+  IconButton,
+  ListItem,
+  shouldForwardProp,
+  Spacer,
+  UnorderedList,
+  useColorMode
+} from "@chakra-ui/react";
 import { Link, NavLink, routes } from "@redwoodjs/router";
 import { MdModeNight, MdWorkOutline } from "react-icons/md";
-import { motion } from "framer-motion";
+import { isValidMotionProp, motion } from "framer-motion";
 import { useState } from "react";
 import {
   Menu,
@@ -40,9 +50,17 @@ const Navbar = () => {
       name: "Contact", MenuIcon: <AiOutlineContacts />, id: 4 }
   ];
 
+  const ChakraBox = chakra(motion.div, {
+    /**
+     * Allow motion props and non-Chakra props to be forwarded.
+     */
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop)
+  });
 
   return (
-    <>
+    <ChakraBox
+      // TODO: add animation only on home page
+    >
       <Flex as="nav" align="center"
             display={{
               base: "none",
@@ -128,7 +146,7 @@ const Navbar = () => {
           </MenuList>
         </Menu>
       </Flex>
-    </>
+    </ChakraBox>
   );
 };
 
