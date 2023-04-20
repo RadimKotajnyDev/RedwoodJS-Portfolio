@@ -50,17 +50,9 @@ const Navbar = () => {
       name: "Contact", MenuIcon: <AiOutlineContacts />, id: 4 }
   ];
 
-  const ChakraBox = chakra(motion.div, {
-    /**
-     * Allow motion props and non-Chakra props to be forwarded.
-     */
-    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop)
-  });
 
   return (
-    <ChakraBox
-      // TODO: add animation only on home page
-    >
+    <>
       <Flex as="nav" align="center"
             display={{
               base: "none",
@@ -146,7 +138,7 @@ const Navbar = () => {
           </MenuList>
         </Menu>
       </Flex>
-    </ChakraBox>
+    </>
   );
 };
 
