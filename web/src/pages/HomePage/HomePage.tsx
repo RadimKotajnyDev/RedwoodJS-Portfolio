@@ -23,46 +23,61 @@ const HomePage = () => {
         description="Radim Kotajny Portfolio Website"
       />
       <Box>
-        <Flex
-          //zIndex="1"
-          as="div" position="relative" mb={{
-          base: "0",
-          md: "-300px"
-        }}>
-          <Flex as="div" direction="column" ml={{
-            base: 10,
-            md: 100
+        <ChakraBox>
+          <Flex
+            //zIndex="1"
+            h={{
+              base: "fit",
+              lg: "20vh"
+            }}
+            as="div" position="relative" mb={{
+            base: "0",
+            md: "-300px"
           }}>
-            <Box h={10} mb={{
-              base: "150",
-              sm: 10,
-              md: 10
+            <Flex as="div" direction="column" ml={{
+              base: 10,
+              md: 100
             }}>
-              <TypeAnimation
-                cursor={false}
-                //omitDeletionAnimation={true}
-                wrapper="h1"
-                className="h1-text"
-                speed={25}
-                sequence={["Radim Kotajny", 1500]}
-              />
-            </Box>
-            <Box h={10} mb={{
-              base: 0,
-              md: 350,
-              lg: 10
-            }}>
-              <TypeAnimation
-                speed={50}
-                sequence={[1500, "Frontend Developer."]}
-                wrapper="h2"
-                cursor={false}
-                className="h2-text"
-              />
-            </Box>
+              <Box h={10}>
+                <TypeAnimation
+                  cursor={false}
+                  wrapper="h1"
+                  className="h2-text"
+                  speed={25}
+                  sequence={["Hello, i'm", 1500]}
+                />
+              </Box>
+              <Box h={10} mb={{
+                base: "150",
+                sm: 10,
+                md: 10
+              }}>
+                <TypeAnimation
+                  cursor={false}
+                  //omitDeletionAnimation={true}
+                  wrapper="h1"
+                  className="h1-text"
+                  speed={25}
+                  sequence={[1000 ,"Radim Kotajny", 1500]}
+                />
+              </Box>
+              <Box h={10} mb={{
+                base: 0,
+                md: 350,
+                lg: 10
+              }}>
+                <TypeAnimation
+                  speed={50}
+                  sequence={[1500, "Frontend Developer."]}
+                  wrapper="h2"
+                  cursor={false}
+                  className="h2-text"
+                />
+              </Box>
+            </Flex>
+            <Spacer />
           </Flex>
-          <Spacer />
-        </Flex>
+        </ChakraBox>
         <ChakraBox
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
