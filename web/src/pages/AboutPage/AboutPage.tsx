@@ -18,15 +18,15 @@ const AboutPage = () => {
         md: "7xl"
       }}>About</Heading>
       <Grid>
-        
+
       </Grid>
       <Center>
-        <Flex as="div" direction="column" bg="gray.700" p={10} borderRadius={10
+        <Flex as="div" direction="column" bg="whiteAlpha.100" p={10} borderRadius={10
         }>
           <Text as="p" fontSize={{
             base: "xl",
             md: "2xl"
-          }} fontWeight="light">I code in these languages / frameworks:</Text>
+          }} fontWeight="light" color="white">I'm using these technologies to bring ideas to life.</Text>
           <Flex justify="center">
             <ChakraBox
               className="absolute"
@@ -35,6 +35,12 @@ const AboutPage = () => {
               transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
             >
               <Image width="200px" height="200px" src="/react.svg" alt="React Logo" p={10} />
+            </ChakraBox>
+            <ChakraBox>
+              <Image width="200px" height="100px" src="/tailwindcss-logotype-white.svg" alt="Tailwindcss logo" />
+              <Box p={3} bg="whitesmoke" borderRadius="xl">
+                <Image width="200px" height="50px" alt="chakraUI logo" src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true" />
+              </Box>
             </ChakraBox>
           </Flex>
         </Flex>
