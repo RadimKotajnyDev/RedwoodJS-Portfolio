@@ -1,4 +1,4 @@
-import "@fontsource/noto-sans";
+import "@fontsource/open-sans";
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
 import { mode } from '@chakra-ui/theme-tools'
@@ -149,7 +149,7 @@ const colors: any = {
 
 const theme = extendTheme({ config }, { colors }, {
   fonts: {
-    body: `'Open Sans', sans-serif`
+    body: `'Open sans', sans-serif`
   },
   styles: {
     global: (props: StyleFunctionProps) => ({

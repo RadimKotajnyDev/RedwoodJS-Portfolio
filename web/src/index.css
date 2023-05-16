@@ -29,7 +29,7 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: var(--chakra-fontSizes-6xl);
+  font-size: 3.75rem;
   font-weight: 900;
 }
 
@@ -37,7 +37,7 @@
   color: #52c4c4;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: var(--chakra-fontSizes-4xl);
+  font-size: 2.25rem;
   font-weight: 500;
 }
 

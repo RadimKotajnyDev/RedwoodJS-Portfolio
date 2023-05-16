@@ -1,15 +1,17 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
-import { Text } from "@chakra-ui/react";
+import { Center, Heading, Text } from "@chakra-ui/react";
 
 const ContactPage = () => {
   return (
     <>
       <MetaTags title="Contact" description="Contact page" />
-      <Text as="h1" className="h1-text" align="center" fontSize={{
-        base: "4xl",
-        md: "7xl"
-      }}>Contact</Text>
+      <Center>
+        <Heading as="h1" className="h1-text" fontSize={{
+          base: "4xl",
+          md: "7xl"
+        }}>Contact</Heading>
+      </Center>
 
     </>
   )

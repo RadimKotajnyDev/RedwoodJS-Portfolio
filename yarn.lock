@@ -3454,10 +3454,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/noto-sans@npm:^4.5.11":
-  version: 4.5.11
-  resolution: "@fontsource/noto-sans@npm:4.5.11"
-  checksum: b0b6cfa42e8d45ac141dfe6b3ffd58880a5480844b7c3b5103ab17883b8ba2c23b0a214e5fcf4f2c9861afbb2a9fdece9e64f45532931e0051fe6ae37684b591
+"@fontsource/open-sans@npm:^4.5.14":
+  version: 4.5.14
+  resolution: "@fontsource/open-sans@npm:4.5.14"
+  checksum: 90081358e51c41d4e470d61612d53d4a202768a8d0a09a259697c98fb323aecf93d38736d8f2473f5f4940e2a74580c6b49a78c1316bed8299e2aa386751818b
   languageName: node
   linkType: hard
 
@@ -22186,7 +22186,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@fontsource/noto-sans": ^4.5.11
+    "@fontsource/open-sans": ^4.5.14
     "@redwoodjs/core": 4.4.2
     react-icons: ^4.7.1
     react-type-animation: ^2.1.2

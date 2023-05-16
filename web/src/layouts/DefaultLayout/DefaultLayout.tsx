@@ -9,7 +9,7 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return <Box
     pos="relative"
     h="100vh"
-    //background="blackAlpha.900" //TODO: fix dark mode
+    //background="blackAlpha.900"
     //color="white"
   >
     <Box
